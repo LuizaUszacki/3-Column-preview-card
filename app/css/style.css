@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--very-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 2.0625rem;
+  color: var(--very-light-gray);
+}
+
+p,
+a {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+}
+
+p {
+  color: var(--transparent-white-paragraphs);
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  width: min(100% - 3.125rem, 20.3125rem);
+  min-height: 31.25rem;
+  margin-block: 5.3125rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+@media (min-width: 62.5em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width: 57.5rem;
+    margin-block: 0rem;
+  }
+}
+.grid__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3rem;
+  background: var(--main-color);
+}
+@media (max-width: 18.75em) {
+  .grid__card {
+    padding: 1.875rem;
+  }
+}
+.grid__card img {
+  height: 2.5rem;
+  margin-bottom: 2.1875rem;
+}
+.grid__card h2 {
+  margin-bottom: 1.875rem;
+}
+.grid__card p {
+  margin-bottom: clamp(1.5rem, 1.5rem + 1vw, 5.125rem);
+}
+@media (min-width: 62.5em) {
+  .grid__card p {
+    margin-bottom: 1.5rem;
+  }
+}
+.grid__card a {
+  display: inline-block;
+  background: var(--very-light-gray);
+  height: 3.125rem;
+  width: 9.375rem;
+  border: 0.125rem solid var(--very-light-gray);
+  border-radius: 100vmax;
+  box-shadow: 0 0 0.625rem rgba(20, 20, 20, 0.1);
+  color: var(--main-color);
+  transition: background 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid__card a:hover {
+  background: var(--main-color);
+  color: var(--very-light-gray);
+}
+.grid__card--yellow {
+  --main-color: var(--bright-orange);
+}
+.grid__card--blue {
+  --main-color: var(--dark-cyan);
+}
+.grid__card--green {
+  --main-color: var(--very-dark-cyan);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+@use '../utils' as u;
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-family: u.$font-big-shoulders;
+    text-transform: uppercase;
+    font-size: u.rem(33);
+    color: var(--very-light-gray);
+}
+
+p,
+a {
+    font-family: u.$font-lexend;
+    font-size: u.rem(15);
+    line-height: 1.8;
+}
+
+p {
+    color: var(--transparent-white-paragraphs);
+}
